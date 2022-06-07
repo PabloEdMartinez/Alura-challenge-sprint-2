@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Recursos/logo00.png" />
+    <title>Juego del ahorcado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="Recursos/logo.png" class="logo" alt="logo alura" />
+      </header>
+      <section class="s1">
+        <button type="button" onclick="iniciarJuego()" class="botons1">
+          Iniciar juego
+        </button>
+        <button type="button" onclick="agregarPalabra()" class="botons2">
+          Agregar nueva palabra
+        </button>
+      </section>
+      <section class="s2">
+        <textarea
+          type="text"
+          id="palabraNueva"
+          maxlength="8"
+          style="text-transform: uppercase"
+          onkeypress="return (event.charCode >= 65 && event.charCode <= 90 || event.charCode >= 97 && event.charCode <= 122)"
+          placeholder="Ingrese una palabra"
+        ></textarea>
+        <h6>⋄ Máx. de 8 letras</h6>
+        <button type="button" onclick="GuardarYComenzar()" class="botons1">
+          Guardar y empezar
+        </button>
+        <button type="button" onclick="cancelar()" class="botons2">
+          Cancelar
+        </button>
+      </section>
+      <section class="s3">
+        <canvas width="320" height="320" class="dibujo00"></canvas>
+        <div></div>
+        <canvas width="660px" height="150px" class="dibujo"></canvas>
+        <div id="btns3" style="width: 40%">
+          <button type="button" onclick="iniciarJuego()" class="botons1">
+            Nuevo juego
+          </button>
+          <button type="button" onclick="cancelar()" class="botons2">
+            Desistir
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="navegacion_pantallas.js"></script>
+    <script src="logica_juego.js"></script>
+    <script src="canvas.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>

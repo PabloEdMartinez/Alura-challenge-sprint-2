@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Serif Pro", serif;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+html {
+  height: 120%;
+}
+.logo {
+  margin-top: 30px;
+}
+body {
+  height: 100%;
+  background: linear-gradient(#9cecfb, #65c7f7, #0052d4);
+  margin: 0;
+}
+main {
+  width: 100%;
+}
+
+button {
+  padding: 8px;
+  margin: 0 2px;
+  border-style: solid;
+  border-color: #8780d1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.15s all;
+}
+
+.botons1 {
+  background-color: #6587f7;
+}
+.botons2 {
+  background-color: #d3ddfd;
+}
+
+button:hover {
+  border-color: #493fad;
+  transform: scale(1.08);
+}
+
+.s1,
+.s2,
+.s3 {
+  position: absolute;
+  top: 50%;
+}
+.s1 {
+  left: 41%;
+}
+.s2 {
+  left: 42%;
+}
+.s3 {
+  left: 44%;
+}
+.oculto {
+  display: none;
+}
+
+textarea {
+  position: relative;
+  right: 20px;
+  bottom: 50px;
+  padding: 2px;
+  font-size: 30px;
+  font-weight: 620;
+  text-align: center;
+  color: #011d7a;
+  outline: none;
+  resize: none;
+  border-radius: 10px;
+  border-color: #493fad;
+  background-image: radial-gradient(closest-corner, #d4ddf8, #b6c6fc);
+}
+
+.dibujo {
+  position: relative;
+  bottom: 300px;
+  right: 30%;
+}
+
+.dibujo00 {
+  position: relative;
+  bottom: 300px;
+  right: 5%;
+}
+
+#btns3 {
+  position: relative;
+  bottom: 300px;
+}
+
+@media screen and (max-width: 770px) {
+  body {
+    width: 0%;
+  }
+  .logo {
+    margin-top: 30px;
+  }
+
+  .s1,
+  .s2 {
+    left: 30%;
+  }
+
+  .s3 {
+    left: 5%;
+  }
+  .dibujo00 {
+    left: 200px;
+  }
+  .dibujo {
+    left: 50px;
+  }
+  #btns3 {
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .s1,
+  .s2 {
+    left: 19%;
+  }
+  #btns3 {
+    left: 15%;
+  }
+  .s3 {
+    width: 100%;
+    left: 0%;
+  }
+  .dibujo00 {
+    width: 80%;
+    left: 30px;
+  }
+  .dibujo {
+    width: 80%;
+    left: 35px;
+  }
+  #btns3 {
+    left: 32%;
+  }
+  textarea {
+    width: 90%;
+  }
+  button {
+    width: 80%;
+  }
+}
