@@ -1,4 +1,4 @@
-const palabras = ["HTML", "CSS", "CANVAS", "JAVASCRIPT"];
+const palabras = ["HTML", "CSS", "CANVAS", "JAVASCRIPT", "FUNCION", "CONSTANTE"];
 var letras = [];
 var palabraCorrecta = "";
 var palabraSecreta = "";
@@ -34,7 +34,6 @@ function adicionarLetraIncorrecta(letter) {
 function pulsarTecla() {
   document.onkeyup = (e) => {
     let letra = e.key.toUpperCase();
-    console.log(letra);
     if (letra.match(patron) && letra.length < 2) {
       if (!verificarLetraClicada(e.key)) {
         if (palabraSecreta.includes(letra)) {
@@ -44,7 +43,6 @@ function pulsarTecla() {
               adicionarLetraCorrecta(i);
               if (palabraCorrecta.length == palabraSecreta.length) {
                 swal("ganaste!", "", "success");
-                iniciarJuego();
                 break;
               }
             }

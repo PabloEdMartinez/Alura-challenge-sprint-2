@@ -115,7 +115,6 @@ function fallos() {
   if (errores == 1) {
     f8();
     swal("Perdiste!", "La palabra es: " + palabraSecreta, "error");
-    iniciarJuego();
   }
 }
 
